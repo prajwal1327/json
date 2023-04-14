@@ -1,0 +1,341 @@
+{
+    "msg": [
+        {
+            "IP": "10.21.34.10"
+        },
+        {
+            "Hostname": {
+                "changed": true,
+                "cmd": "hostname",
+                "delta": "0:00:00.046865",
+                "end": "2023-04-11 12:22:46.262583",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:22:46.215718",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "Taashee.com.in\r\n",
+                "stdout_lines": [
+                    "Taashee.com.in"
+                ]
+            }
+        },
+        {
+            "ping": {
+                "changed": false,
+                "failed": false,
+                "ping": "pong"
+            }
+        },
+        {
+            "cpu": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \"Get-WmiObject win32_processor | Measure-Object -property LoadPercentage -Average | Select-Object Average\"",
+                "delta": "0:00:03.595473",
+                "end": "2023-04-11 12:23:06.936194",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:23:03.340720",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "\r\n         Average\r\n         -------\r\n15.3333333333333\r\n\r\n\r\n",
+                "stdout_lines": [
+                    "",
+                    "         Average",
+                    "         -------",
+                    "15.3333333333333",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "DNS": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \" nslookup 10.21.34.10 \"",
+                "delta": "0:00:00.171873",
+                "end": "2023-04-11 12:22:50.793836",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:22:50.621963",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "Server:  Taashee.com.in\r\nAddress:  10.21.34.10\r\n\r\nName:    Taashee.com.in\r\nAddress:  10.21.34.10\r\n\r\n",
+                "stdout_lines": [
+                    "Server:  Taashee.com.in",
+                    "Address:  10.21.34.10",
+                    "",
+                    "Name:    Taashee.com.in",
+                    "Address:  10.21.34.10",
+                    ""
+                ]
+            }
+        },
+        {
+            "KCC Test": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \"repadmin /kcc\"",
+                "delta": "0:00:00.421883",
+                "end": "2023-04-11 12:22:52.403217",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:22:51.981334",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "\r\r\nRepadmin: running command /kcc against full DC localhost\r\r\nDefault-First-Site-Name\r\r\nCurrent Site Options: (none)\r\r\nConsistency check on localhost successful.\r\r\n\r\r\n",
+                "stdout_lines": [
+                    "",
+                    "",
+                    "Repadmin: running command /kcc against full DC localhost",
+                    "",
+                    "Default-First-Site-Name",
+                    "",
+                    "Current Site Options: (none)",
+                    "",
+                    "Consistency check on localhost successful.",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "Netlogon Test": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \"dcdiag /test:netlogons\"",
+                "delta": "0:00:00.328130",
+                "end": "2023-04-11 12:22:53.918839",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:22:53.590708",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "\r\nDirectory Server Diagnosis\r\r\n\r\nPerforming initial setup:\r\r\n   Trying to find home server...\r\r\n   Home Server = Taashee.com.in\r\r\n   * Identified AD Forest. \r\n   Done gathering initial info.\r\r\n\r\nDoing initial required tests\r\r\n   \r\n   Testing server: Default-First-Site-Name\\Taashee.com.in\r\r\n      Starting test: Connectivity\r\r\n         ......................... Taashee.com.in passed test Connectivity\r\r\n\r\r\nDoing primary tests\r\r\n   \r\n   Testing server: Default-First-Site-Name\\Taashee.com.in\r\r\n      Starting test: NetLogons\r\r\n         ......................... Taashee.com.in passed test NetLogons\r\r\n   \r\n   \r\n   Running partition tests on : ForestDnsZones\r\r\n   \r\n   Running partition tests on : DomainDnsZones\r\r\n   \r\n   Running partition tests on : Schema\r\r\n   \r\n   Running partition tests on : Configuration\r\r\n   \r\n   Running partition tests on : Taashee\r\r\n   \r\n   Running enterprise tests on : Taashee.in\r\r\n",
+                "stdout_lines": [
+                    "",
+                    "Directory Server Diagnosis",
+                    "",
+                    "",
+                    "Performing initial setup:",
+                    "",
+                    "   Trying to find home server...",
+                    "",
+                    "   Home Server = Taashee.com.in",
+                    "",
+                    "   * Identified AD Forest. ",
+                    "   Done gathering initial info.",
+                    "",
+                    "",
+                    "Doing initial required tests",
+                    "",
+                    "   ",
+                    "   Testing server: Default-First-Site-Name\\Taashee.com.in",
+                    "",
+                    "      Starting test: Connectivity",
+                    "",
+                    "         ......................... Taashee.com.in passed test Connectivity",
+                    "",
+                    "",
+                    "",
+                    "Doing primary tests",
+                    "",
+                    "   ",
+                    "   Testing server: Default-First-Site-Name\\Taashee.com.in",
+                    "",
+                    "      Starting test: NetLogons",
+                    "",
+                    "         ......................... Taashee.com.in passed test NetLogons",
+                    "",
+                    "   ",
+                    "   ",
+                    "   Running partition tests on : ForestDnsZones",
+                    "",
+                    "   ",
+                    "   Running partition tests on : DomainDnsZones",
+                    "",
+                    "   ",
+                    "   Running partition tests on : Schema",
+                    "",
+                    "   ",
+                    "   Running partition tests on : Configuration",
+                    "",
+                    "   ",
+                    "   Running partition tests on : Taashee",
+                    "",
+                    "   ",
+                    "   Running enterprise tests on : Taashee.in",
+                    ""
+                ]
+            }
+        },
+        {
+            "Sysvol Check": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \"dcdiag /test:sysvolcheck\"",
+                "delta": "0:00:00.312505",
+                "end": "2023-04-11 12:22:55.434469",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:22:55.121964",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "\r\nDirectory Server Diagnosis\r\r\n\r\nPerforming initial setup:\r\r\n   Trying to find home server...\r\r\n   Home Server = Taashee.com.in\r\r\n   * Identified AD Forest. \r\n   Done gathering initial info.\r\r\n\r\nDoing initial required tests\r\r\n   \r\n   Testing server: Default-First-Site-Name\\Taashee.com.in\r\r\n      Starting test: Connectivity\r\r\n         ......................... Taashee.com.in passed test Connectivity\r\r\n\r\r\nDoing primary tests\r\r\n   \r\n   Testing server: Default-First-Site-Name\\Taashee.com.in\r\r\n      Starting test: SysVolCheck\r\r\n         ......................... Taashee.com.in passed test SysVolCheck\r\r\n   \r\n   \r\n   Running partition tests on : ForestDnsZones\r\r\n   \r\n   Running partition tests on : DomainDnsZones\r\r\n   \r\n   Running partition tests on : Schema\r\r\n   \r\n   Running partition tests on : Configuration\r\r\n   \r\n   Running partition tests on : Taashee\r\r\n   \r\n   Running enterprise tests on : Taashee.in\r\r\n",
+                "stdout_lines": [
+                    "",
+                    "Directory Server Diagnosis",
+                    "",
+                    "",
+                    "Performing initial setup:",
+                    "",
+                    "   Trying to find home server...",
+                    "",
+                    "   Home Server = Taashee.com.in",
+                    "",
+                    "   * Identified AD Forest. ",
+                    "   Done gathering initial info.",
+                    "",
+                    "",
+                    "Doing initial required tests",
+                    "",
+                    "   ",
+                    "   Testing server: Default-First-Site-Name\\Taashee.com.in",
+                    "",
+                    "      Starting test: Connectivity",
+                    "",
+                    "         ......................... Taashee.com.in passed test Connectivity",
+                    "",
+                    "",
+                    "",
+                    "Doing primary tests",
+                    "",
+                    "   ",
+                    "   Testing server: Default-First-Site-Name\\Taashee.com.in",
+                    "",
+                    "      Starting test: SysVolCheck",
+                    "",
+                    "         ......................... Taashee.com.in passed test SysVolCheck",
+                    "",
+                    "   ",
+                    "   ",
+                    "   Running partition tests on : ForestDnsZones",
+                    "",
+                    "   ",
+                    "   Running partition tests on : DomainDnsZones",
+                    "",
+                    "   ",
+                    "   Running partition tests on : Schema",
+                    "",
+                    "   ",
+                    "   Running partition tests on : Configuration",
+                    "",
+                    "   ",
+                    "   Running partition tests on : Taashee",
+                    "",
+                    "   ",
+                    "   Running enterprise tests on : Taashee.in",
+                    ""
+                ]
+            }
+        },
+        {
+            "DFSR Test": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \"dfsrdiag.exe ReplicationState\"",
+                "delta": "0:00:00.218752",
+                "end": "2023-04-11 12:22:56.871962",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:22:56.653209",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "Summary\r\n\r\n  Active inbound connections: 0\r\n  Updates received: 0\r\n\r\n  Active outbound connections: 0\r\n  Updates sent out: 0\r\n\r\nOperation Succeeded\r\n\r\n",
+                "stdout_lines": [
+                    "Summary",
+                    "",
+                    "  Active inbound connections: 0",
+                    "  Updates received: 0",
+                    "",
+                    "  Active outbound connections: 0",
+                    "  Updates sent out: 0",
+                    "",
+                    "Operation Succeeded",
+                    ""
+                ]
+            }
+        },
+        {
+            "NTP status": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \"w32tm /query /status\"",
+                "delta": "0:00:00.187498",
+                "end": "2023-04-11 12:22:58.246957",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:22:58.059459",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "Leap Indicator: 0(no warning)\nStratum: 1 (primary reference - syncd by radio clock)\nPrecision: -23 (119.209ns per tick)\nRoot Delay: 0.0000000s\nRoot Dispersion: 10.0000000s\nReferenceId: 0x4C4F434C (source name:  \"LOCL\")\nLast Successful Sync Time: 4/11/2023 4:17:25 PM\nSource: Free-running System Clock\nPoll Interval: 6 (64s)\n\n",
+                "stdout_lines": [
+                    "Leap Indicator: 0(no warning)",
+                    "Stratum: 1 (primary reference - syncd by radio clock)",
+                    "Precision: -23 (119.209ns per tick)",
+                    "Root Delay: 0.0000000s",
+                    "Root Dispersion: 10.0000000s",
+                    "ReferenceId: 0x4C4F434C (source name:  \"LOCL\")",
+                    "Last Successful Sync Time: 4/11/2023 4:17:25 PM",
+                    "Source: Free-running System Clock",
+                    "Poll Interval: 6 (64s)",
+                    ""
+                ]
+            }
+        },
+        {
+            "firewall": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \"Get-NetFirewallProfile | Select-Object Name,Enabled\"",
+                "delta": "0:00:01.171868",
+                "end": "2023-04-11 12:23:00.621956",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:22:59.450087",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "\r\nName    Enabled\r\n----    -------\r\nDomain     True\r\nPrivate    True\r\nPublic     True\r\n\r\n\r\n",
+                "stdout_lines": [
+                    "",
+                    "Name    Enabled",
+                    "----    -------",
+                    "Domain     True",
+                    "Private    True",
+                    "Public     True",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "disk info": {
+                "changed": true,
+                "cmd": "powershell.exe -Command \"Get-WmiObject Win32_LogicalDisk | Select-Object DeviceID,FreeSpace,Size\"",
+                "delta": "0:00:00.328122",
+                "end": "2023-04-11 12:23:02.153209",
+                "failed": false,
+                "rc": 0,
+                "start": "2023-04-11 12:23:01.825086",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "\r\nDeviceID    FreeSpace         Size\r\n--------    ---------         ----\r\nC:       118053466112 129814753280\r\nD:        51709345792  53687087104\r\nF:        30407651328  30599540736\r\n\r\n\r\n",
+                "stdout_lines": [
+                    "",
+                    "DeviceID    FreeSpace         Size",
+                    "--------    ---------         ----",
+                    "C:       118053466112 129814753280",
+                    "D:        51709345792  53687087104",
+                    "F:        30407651328  30599540736",
+                    "",
+                    ""
+                ]
+            }
+        }
+    ]
+}
